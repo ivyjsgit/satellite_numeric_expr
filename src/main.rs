@@ -1,5 +1,5 @@
 use std::{env, io, fs};
-use blocks_world::pddl_parser::make_block_problem_from;
+use satellite_numeric::pddl_parser::make_satellite_problem_from;
 use anyhop::BacktrackPreference::*;
 use anyhop::BacktrackStrategy::*;
 use anyhop::AnytimePlannerBuilder;
@@ -40,7 +40,7 @@ fn main() -> io::Result<()> {
 
 fn assess_file(file: &str, results: &mut String, limit_ms: Option<u128>) -> io::Result<()> {
     println!("Running {}", file);
-    let (start, goal) = make_block_problem_from(file)?;
+    let (start, goal) = make_satellite_problem_from(file)?;
     for strategy in vec![Alternate(LeastRecent), Steady(LeastRecent), Steady(MostRecent)] {
         for apply_cutoff in vec![true, false] {
             let outcome = AnytimePlannerBuilder::state_goal(&start, &goal)
