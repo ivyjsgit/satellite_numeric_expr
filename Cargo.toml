@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 anyhop = {git = "https://github.com/gjf2a/anyhop"}
-blocks_world = {git = "https://github.com/gjf2a/blocks_world"}
+satellite_numeric = {git = "https://github.com/ivyjsgit/satellite_numeric"}
