@@ -8,5 +8,5 @@ edition = "2018"
 
 [dependencies]
 anyhop = {git = "https://github.com/gjf2a/anyhop"}
-satellite_numeric = {git = "https://github.com/ivyjsgit/satellite_numeric"}
+satellite_numeric = {git = "https://github.com/ivyjsgit/satellite_numeric", branch="Development"}
 #satellite_numeric = {path = "/home/ivy/Desktop/Rust/satellite_numeric"}
