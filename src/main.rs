@@ -1,9 +1,10 @@
 use std::io;
 use satellite_numeric::pddl_parser::make_satellite_problem_from;
-use anyhop::process_expr_cmd_line;
+use anyhop::{process_expr_cmd_line, CmdArgs};
 fn main() -> io::Result<()> {
     let logger = setup_logger();
-    return process_expr_cmd_line(&make_satellite_problem_from);
+    let cmdArgs = CmdArgs::new()?;
+    return process_expr_cmd_line(&make_satellite_problem_from, &cmdArgs);
 }
 
 pub fn setup_logger() -> Result<(), fern::InitError> {
