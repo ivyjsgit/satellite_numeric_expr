@@ -3,13 +3,13 @@ use satellite_numeric::pddl_parser::make_satellite_problem_from;
 use anyhop::{process_expr_cmd_line, CmdArgs};
 
 fn main() -> io::Result<()> {
-    let cmdArgs = CmdArgs::new()?;
-    let verbosity:u32 = match cmdArgs.num_from("v") {
+    let cmd_args = CmdArgs::new()?;
+    let verbosity:u32 = match cmd_args.num_from("v") {
         Some(n) => n,
         None => 0,
     };
-    let logger = setup_logger(verbosity);
-    return process_expr_cmd_line(&make_satellite_problem_from, &cmdArgs);
+    let _logger = setup_logger(verbosity);
+    return process_expr_cmd_line(&make_satellite_problem_from, &cmd_args);
 }
 
 pub fn setup_logger(verbosity:u32) -> Result<(), fern::InitError> {
