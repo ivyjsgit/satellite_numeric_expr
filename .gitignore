@@ -25,3 +25,5 @@ output.log
 *.xz
 
 *.log
+
+.DS_Store
