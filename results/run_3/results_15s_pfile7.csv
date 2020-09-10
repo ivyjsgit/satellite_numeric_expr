@@ -1,4 +1,0 @@
-label,first,most_expensive,cheapest,discovery_time,total_time,pruned_prior,num_prior_plans,total_prior_attempts,total_attempts
-o_pfile7_LeastRecent_cutoff,36,36,34,6409,15000,83,1,84,264
-o_pfile7_MostRecent_cutoff,36,36,34,11691,15000,303,1,304,394
-o_pfile7_Heuristic_cutoff,36,36,34,1943,15001,24,1,25,265
